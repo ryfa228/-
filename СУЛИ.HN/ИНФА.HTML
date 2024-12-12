@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Океаны и их глубины</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0e4d6e; /* Цвет океанской глубины */
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00bcd4; /* Цвет морской волны */
+        }
+
+        #main-banner {
+            height: 100vh;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/6/67/Pacific_Ocean.jpg') center/cover no-repeat;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .banner-content h2 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        #about, #depths, #diameter, #ecosystem {
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 60px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+        }
+
+        #about img, #depths img, #diameter img, #ecosystem img {
+            width: 80%; /* Ограничиваем ширину изображений до 80% от родительского контейнера */
+            max-width: 800px; /* Ограничиваем максимальную ширину изображений */
+            height: auto; /* Сохраняем пропорции изображений */
+            border-radius: 10px; /* Скругляем углы изображений */
+            margin: 20px auto; /* Центрируем изображения и добавляем отступы */
+            display: block; /* Делаем изображения блочными элементами */
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Плавные анимации */
+        #main-banner {
+            animation: oceanWave 30s infinite linear;
+        }
+
+        @keyframes oceanWave {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 0; }
+        }
+
+        /* Стили для секций */
+        section {
+            padding: 50px 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 36px;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            #about img, #depths img, #diameter img, #ecosystem img {
+                width: 100%; /* На маленьких экранах изображения будут занимать всю ширину контейнера */
+                margin-top: 10px; /* Меньший отступ сверху */
+            }
+            section h2 {
+                font-size: 28px; /* Уменьшаем размер заголовков на мобильных устройствах */
+            }
+            .banner-content h2 {
+                font-size: 36px; /* Уменьшаем размер заголовка на баннере */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Океаны и их глубины</h1>
+            <p>Мифы и факты о подводном мире</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#depths">Глубины</a></li>
+                <li><a href="#diameter">Диаметр океанов</a></li>
+                <li><a href="#ecosystem">Экосистемы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="main-banner">
+        <div class="banner-content">
+            <h2>Откройте для себя мир океанов и их глубин</h2>
+            <p>Узнайте о самых глубоких местах океанов и их уникальных характеристиках</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Что такое океаны?</h2>
+        <p>Океаны — это огромные водные пространства, покрывающие большую часть Земли. Они являются домом для множества экосистем и странных существ, которые населяют подводные миры на невероятных глубинах.</p>
+        <img src="Без названия.jpeg" alt="Карта океанов">
+    </section>
+
+    <section id="depths">
+        <h2>Глубины океанов</h2>
+        <p>Океаны могут достигать невероятных глубин. Самая глубокая точка на планете находится в Марианской впадине, глубина которой составляет около 10,9 километров.</p>
+        <div>
+            <h3>Марианская впадина</h3>
+            <p>Глубина: 10 994 метра.</p>
+            <p>Это самая глубокая точка мирового океана, которая поглощает свет и создаёт необычные условия для жизни морских обитателей.</p>
+            <img src="Без названия (1).jpeg" alt="Марианская впадина">
+        </div>
+    </section>
+
+    <section id="diameter">
+        <h2>Диаметр океанов</h2>
+        <p>Океаны не имеют строго определённого диаметра, так как они представляют собой бескрайние водные просторы. Тем не менее, можно оценить диаметр Земли с учётом водного слоя.</p>
+        <div>
+            <h3>Средний диаметр Земли</h3>
+            <p>Диаметр Земли — 12 742 км. Водные массы, покрывающие Землю, составляют около 71% её поверхности, что делает планету уникальной среди других планет.</p>
+            <img src="images.png" alt="Сечение Земли">
+        </div>
+    </section>
+
+    <section id="ecosystem">
+        <h2>Экосистемы океанов</h2>
+        <p>Океаны содержат множество уникальных экосистем, таких как коралловые рифы, глубоководные пещеры и ещё неизведанные регионы, которые поддерживают жизнь многих существ, от микроскопических организмов до гигантских китов.</p>
+        <img src="Без названия (2).jpeg" alt="Коралловые рифы">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Океаны и их глубины. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
